@@ -1,10 +1,10 @@
 import Vue from "vue";
 import VueApollo from "vue-apollo";
 import {
-  createApolloClient,
+  createApolloClient
   // restartWebsockets
 } from "vue-cli-plugin-apollo/graphql-client";
-import { ApolloClient } from 'apollo-client'
+import { ApolloClient } from "apollo-client";
 
 // Install the vue plugin
 Vue.use(VueApollo);
@@ -82,7 +82,10 @@ export function createProvider(options = {}) {
 }
 
 // Manually call this when user log in
-export async function onLogin<TCacheShape>(apolloClient: ApolloClient<TCacheShape>, token: any) {
+export async function onLogin<TCacheShape>(
+  apolloClient: ApolloClient<TCacheShape>,
+  token: any
+) {
   if (typeof localStorage !== "undefined" && token) {
     localStorage.setItem(AUTH_TOKEN, token);
   }
@@ -96,7 +99,9 @@ export async function onLogin<TCacheShape>(apolloClient: ApolloClient<TCacheShap
 }
 
 // Manually call this when user log out
-export async function onLogout<TCacheShape>(apolloClient: ApolloClient<TCacheShape>) {
+export async function onLogout<TCacheShape>(
+  apolloClient: ApolloClient<TCacheShape>
+) {
   if (typeof localStorage !== "undefined") {
     localStorage.removeItem(AUTH_TOKEN);
   }
