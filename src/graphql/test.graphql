@@ -1,0 +1,6 @@
+query getProjectDetail($id: String!) {
+    project(id: $id) {
+        _id,
+        name
+    }
+}

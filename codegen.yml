@@ -1,0 +1,13 @@
+overwrite: true
+schema: "./schema.graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+    config:
+      declarationKind: 'interface'
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

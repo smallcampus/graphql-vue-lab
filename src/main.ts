@@ -6,8 +6,13 @@ import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 import { createProvider } from "./vue-apollo";
+import 'vue-form-generator/dist/vfg.css'
 
 Vue.config.productionTip = false;
+
+// const VueFormGenerator = require("vue-form-generator")
+// console.log("VueFormGenerator", VueFormGenerator)
+// Vue.use(VueFormGenerator)
 
 new Vue({
   router,
